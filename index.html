@@ -1,264 +1,496 @@
 
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>混合布局</title>
-    </head>
-    <style type="text/css">
-	#box{
-		width:1024px;
-		height:1300px;
-		/*margin:0 auto;*/
-		margin:0 auto 0 auto;/*上 右 下 左*/
-	}
-	body{
-		overflow: scroll;
-		overflow-x: hidden;
-	}
-	#banner{
-		/*background-color:#66F;*/
-		height:200px;
-	}
-	#menu{
-		background-color:#2f4f4f
-		height:50px;
-	}
-	#main{
-		background-color:#2f4f4f;
-		height:1000px;
-	}
-	#left{
-		background-color: white;
-		height:1000px;
-		width:250px;
-		float:left;/*可以使div横向排排坐*/
-	}
-	#right{
-		background-color: white;
-		height:1000px;
-		width:774px;
-		float:right;/*可以使div横向排排坐*/
-	}
-	li{
-		list-style-type: none;
-		float: left;
-	}
-	.neirong{
-		display: block;
-		width: 160px;/*设置块的宽度*/
-		height: 50px;/*设置块的长度*/
-		font-family: Microsoft Yahei;
-		line-height: 50px;/*设置字体在块中的高度*/
-		background-color: #2f4f4f;
-		margin: 0px 0px;/*块里的高宽通过margin设置*/
-		color: #fff;
-		text-align: center;/*字体居中*/
-		text-decoration: none;/*去掉下划线*/
-		font-size: 15px;
-	}
-	.neirong:hover{
-		background-color: #2f6f4f;
-	}
-	#footer{
-		background-color: #2F4F4F;
-		height:80px;
-	}
-	#footer span{
-		text-align: center;
-		display: block;
-	}
-	#dy{
-		height:150px;
-		margin-top:20px;
-	}
-	.biaoti{
-		color:#FFFFFF;
-		font-size:16px;
-		font-weight:bolder; /*加粗*/
-		width:220px;
-		height:40px;
-		background-color:#328048;
-		border-radius:0 10px 10px 0; /*只设置右边的圆角 顺序：上 右  下 左*/
-		padding-left:30px;
-		line-height:40px;
-	}
-	#dy ul{
-		padding-left:20px;
-		padding-top:10px;
-		list-style:none;
-		/*去掉点*/
-	}
-	#dy ul li{
-		float:left;
-		/*因为空间不够宽，仅能放下2个li*/
-		width:80px;
-		margin:5px;
-	}
-	#dy ul li a{
-		float:left;
-		font-size:16px;
-		color:#333333;
-		text-decoration:none;
-	}
-	#dy ul li{
-		/*为了和文字保持队形，也浮动*/
-		float:left;
-		margin-right:6px;
-	}
-	</style>
-		<body>
-		    <div id="box">
-		    	<div id="banner">
-					<img src="logo.jpg" width="100%" height="200px">
-		        </div>
-		        <div id="menu">
-		        	<div class="daohang">
-		        		<ul class="nav">
-		        		<li><a href="https://www.youku.com/?spm=a2ha1.14919748_WEBJILUPIAN_JINGXUAN.header-contain.5~5~5!2~5~5~1~3~A" class="neirong">首页</a></li>					
-		        		<li><a href="https://tv.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.1" class="neirong">电视剧</a></li>
-		        		<li><a href="https://movie.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.7" class="neirong">电影</a></li>
-		        		<li><a href="https://comic.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.10">动漫</a></li>
-		        		<li><a href="https://jilupian.youku.com/?spm=a2ha1.14919748_WEBMOVIE_JINGXUAN.top-nav.1~3!2~5~DL~DD~A!6" class="neirong">纪录片</a></li>
-		        		<li><a href="https://live.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_12" class="neirong">直播</a></li>
-		        	</ul>
-		        	</div>
-		        </div>
-		        <div id="main">
-		        	<!--左边区域-->
-		       		<div id="left">
-		            	<div id="dy">
-		            	         <font size="5"><b>电影</b></font>
-		            	         <ul>
-		            	            <li><a href="https://www.youku.com/category/show/c_96_g_%E6%AD%A6%E4%BE%A0.html?spm=a2ha1.14919748_WEBMOVIE_JINGXUAN.drawer3.9">武侠</a></li>
-		            	            <li><a href="https://www.youku.com/category/show/c_96_g_%E7%8A%AF%E7%BD%AA.html?spm=a2ha1.14919748_WEBMOVIE_JINGXUAN.drawer3.11">犯罪</a></li>
-		                            <li><a href="https://www.youku.com/category/show/c_96_g_%E7%A7%91%E5%B9%BB.html?theme=dark">科幻</a></li>
-		    	                    <li><a href="https://www.youku.com/category/show/c_96_g_%E7%88%B1%E6%83%85.html?theme=dark">爱情</a></li>
-            	                    <li><a href="https://www.youku.com/category/show/c_96_g_%E5%8A%A8%E7%94%BB.html?theme=dark">动画</a></li>
-									<li><a href="https://www.youku.com/category/show/c_96_g_%E5%8E%86%E5%8F%B2.html?theme=dark">历史</a></li>
-		            	          </ul>
-		            	</div>
-						<div id="dy">
-						         <font size="5"><b>电视剧</b></font>
-						         <ul>
-						            <li><a href="https://www.youku.com/category/show/c_97_g_%E9%9D%92%E6%98%A5.html?spm=a2ha1.14919748_WEBTV_JINGXUAN.drawer3.7">青春</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_97_g_%E8%B0%8D%E6%88%98.html?theme=dark">谍战</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_97_g_%E7%BD%AA%E6%A1%88.html?theme=dark">罪案</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_97_g_%E5%8F%A4%E8%A3%85.html?theme=dark">古装</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_97_g_%E5%B9%B4%E4%BB%A3.html?theme=dark">年代</a></li>
-									<li><a href="https://www.youku.com/category/show/c_97_g_%E5%86%9C%E6%9D%91.html?theme=dark">农村</a></li>
-						          </ul>
-						</div>
-						<div id="dy">
-						         <font size="5"><b>动漫</b></font>
-						         <ul>
-						            <li><a href="https://www.youku.com/category/show/type_%E5%8A%A8%E6%BC%AB_tags_%E7%83%AD%E8%A1%80,%E6%88%98%E6%96%97.html?spm=a2ha1.14919748_WEBCOMIC_JINGXUAN.drawer3.5">热血</a></li>
-						            <li><a href="https://www.youku.com/category/show/type_%E5%8A%A8%E6%BC%AB_tags_%E7%8E%84%E5%B9%BB.html?spm=a2ha1.14919748_WEBCOMIC_JINGXUAN.drawer3.7">玄幻</a></li>
-						            <li><a href="https://www.youku.com/category/show/type_%E5%8A%A8%E6%BC%AB_tags_%E6%A0%A1%E5%9B%AD.html?spm=a2ha1.14919748_WEBCOMIC_JINGXUAN.drawer3.11">校园</a></li>
-						            <li><a href="https://www.youku.com/category/show/type_%E5%8A%A8%E6%BC%AB_tags_%E7%A7%91%E5%B9%BB.html?spm=a2ha1.14919748_WEBCOMIC_JINGXUAN.drawer3.13">科幻</a></li>
-						            <li><a href="https://www.youku.com/category/show/type_%E5%8A%A8%E6%BC%AB_tags_%E6%8E%A8%E7%90%86.html?spm=a2ha1.14919748_WEBCOMIC_JINGXUAN.drawer3.19">推理</a></li>
-									<li><a href="https://www.youku.com/category/show/type_%E5%8A%A8%E6%BC%AB_tags_%E5%86%92%E9%99%A9.html?spm=a2ha1.14919748_WEBCOMIC_JINGXUAN.drawer3.14">冒险</a></li>
-						          </ul>
-						</div>
-						<div id="dy">
-						         <font size="5"><b>纪录片</b></font>
-						         <ul>
-						            <li><a href="https://www.youku.com/category/show/c_84_g_%E7%BE%8E%E9%A3%9F.html?spm=a2ha1.14919748_WEBJILUPIAN_JINGXUAN.drawer3.7">美食</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_84_g_%E5%86%9B%E4%BA%8B.html?theme=dark">军事</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_84_g_%E8%87%AA%E7%84%B6.html?theme=dark">自然</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_84_g_%E7%A7%91%E6%8A%80.html?theme=dark">科技</a></li>
-						            <li><a href="https://www.youku.com/category/show/c_84_g_%E5%8E%86%E5%8F%B2.html?theme=dark">历史</a></li>
-									<li><a href="https://www.youku.com/category/show/c_84_g_%E6%8E%A2%E9%99%A9.html?theme=dark">探险</a></li>
-						          </ul>
-						</div>
-						<div id="dy">
-						         <font size="5"><b>直播</b></font>
-						         <ul>
-						            <li><a href="https://live.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_12">体育</a></li>
-						            <li><a href="https://live.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_12">游戏</a></li>
-						            <li><a href="https://live.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_12">颜值</a></li>
-						            <li><a href="https://live.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_12">购物</a></li>
-						            <li><a href="https://live.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_12">文化</a></li>
-									<li><a href="https://live.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_12">美食</a></li>
-						          </ul>
-						</div>
-						<div id="dy">
-						         <font size="5"><b>更多</b></font>
-								<ul>
-								   <li><a href="https://child.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.13">少儿</a></li>
-								   <li><a href="https://home.vip.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj2_1">热门</a></li>
-								   <li><a href="https://home.vip.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj2_1">推荐</a></li>
-								   <li><a href="https://home.vip.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj2_1">猜你喜欢</a></li>
-								 </ul>
-						</div>
-		            </div>
-		            <div id="right">
-						<span>主体代码</span>
-						<textarea cols="103px" rows="15px"><body>
-    <div id="box">
-    	<div id="banner"><!--页首区域-->
-        </div>
-        <div id="menu"><!--导航区域-->
-        </div>
-        <div id="main">
-        	<div id="left"></div><!--左边区域-->
-            <div id="right"></div><!--右边区域-->
-        </div>
-        <div id="footer">  <!--页脚-->
-    	</div>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>计算机图形学 | Jared3Wu.github.io</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="计算机图形学" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://liyi1003zcmu.github.io/CGReadme.html" />
+<meta property="og:url" content="https://liyi1003zcmu.github.io/CGReadme.html" />
+<meta property="og:site_name" content="liyi1003zcmu.github.io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="计算机图形学" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"计算机图形学","url":"https://liyi1003zcmu.github.io/CGReadme.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=57c7051ad7da6b527b305f62b69ec79aa0a9bec3">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://liyi1003zcmu.github.io/">liyi1003zcmu.github.io</a></h1>
+      
+
+      <h1 id="计算机图形学">计算机图形学</h1>
+
+<h2 id="实验">实验</h2>
+
+<h3 id="第0章">第0章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/chapter-0.html">第0章</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter-1-lab0.html">Lab0</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第1章">第1章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter1/chapter-1-1.html">第1章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter1/chapter-1-2.html">第1章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter1/chapter-1-3.html">第1章-3</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter1/chapter-1-4.html">第1章-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter1/Chapter-1-lab1.html">Lab1</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第2章">第2章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-1.html">第2章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-2.html">第2章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-3.html">第2章-3</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-4.html">第2章-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-5.html">第2章-5</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-6.html">第2章-6</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-7.html">第2章-7</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter2/chapter-2-8.html">第2章-8</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter2/Chapter-2-lab2.html">Lab2</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第3章">第3章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter3/chapter-3-1.html">第3章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter3/chapter-3-2.html">第3章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter3/chapter-3-3.html">第3章-3</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter3/Chapter-3-lab3.html">Lab3</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第4章">第4章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter4/chapter-4-1.html">第4章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter4/chapter-4-2.html">第4章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter4/chapter-4-3.html">第4章-3</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter4/chapter-4-4.html">第4章-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter4/chapter-4-5.html">第4章-5</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter4/chapter-4-6.html">第4章-6</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter4/Chapter-4-lab4.html">Lab4</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第5章">第5章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter5/chapter-5-1.html">第5章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter5/chapter-5-2.html">第5章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter5/chapter-5-3.html">第5章-3</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter5/chapter-5-4.html">第5章-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter5/chapter-5-5.html">第5章-5</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter5/Chapter-5-lab5.html">Lab5</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第6章">第6章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter6/chapter-6-1.html">第6章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter6/chapter-6-2.html">第6章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter6/chapter-6-3.html">第6章-3</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter6/Chapter-6-lab6.html">Lab6</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第7章">第7章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter7/chapter-7-1.html">第7章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter7/chapter-7-2.html">第7章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter7/chapter-7-3.html">第7章-3</a></td>
+    </tr>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter7/chapter-7-4.html">第7章-4</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter7/chapter-7-5.html">第7章-5</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter7/chapter-7-6.html">第7章-6</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第8章">第8章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter8/chapter-8-1.html">第8章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter8/chapter-8-2.html">第8章-2</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter8/chapter-8-3.html">第8章-3</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter8/chapter-8-4.html">第8章-4</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第9章">第9章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/CourseWare/CGChapters/Chapter9/chapter-9-1.html">第9章-1</a></td>
+      <td><a href="/CourseWare/CGChapters/Chapter9/chapter-9-2.html">第9章-2</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="demos">Demos</h2>
+
+<h3 id="第1章-1">第1章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/demos/chap1-demo-1.html">demo-1-1</a></td>
+      <td><a href="/demos/chap1-demo-2.html">demo-1-2</a></td>
+      <td><a href="/demos/chap1-demo-3.html">demo-1-3</a></td>
+      <td><a href="/demos/chap1-demo-4.html">demo-1-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/demos/chap1-demo-5.html">demo-1-5</a></td>
+      <td><a href="/demos/chap1-demo-6.html">demo-1-6</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第2章-1">第2章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/demos/chap2-demo-1.html">demo-2-1</a></td>
+      <td><a href="/demos/chap2-demo-2.html">demo-2-2</a></td>
+      <td><a href="/demos/chap2-demo-3.html">demo-2-3</a></td>
+      <td><a href="/demos/chap2-demo-4.html">demo-2-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/demos/chap2-demo-5.html">demo-2-5</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第3章-1">第3章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/demos/chap3-demo-1.html">demo-3-1</a></td>
+      <td><a href="/demos/chap3-demo-2.html">demo-3-2</a></td>
+      <td><a href="/demos/chap3-demo-3.html">demo-3-3</a></td>
+      <td><a href="/demos/chap3-demo-4.html">demo-3-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/demos/chap3-demo-5.html">demo-3-5</a></td>
+      <td><a href="/demos/chap3-demo-6.html">demo-3-6</a></td>
+      <td><a href="/demos/chap3-demo-7.html">demo-3-7</a></td>
+      <td><a href="/demos/chap3-demo-8.html">demo-3-8</a></td>
+    </tr>
+    <tr>
+      <td><a href="/demos/chap3-demo-9.html">demo-3-9</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第4章-1">第4章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/demos/chap4-demo-1.html">demo-4-1</a></td>
+      <td><a href="/demos/chap4-demo-2.html">demo-4-2</a></td>
+      <td><a href="/demos/chap4-demo-3.html">demo-4-3</a></td>
+      <td><a href="/demos/chap4-demo-4.html">demo-4-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/demos/chap4-demo-5.html">demo-4-5</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第5章-1">第5章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/demos/chap5-demo-1.html">demo-5-1</a></td>
+      <td><a href="/demos/chap5-demo-2.html">demo-5-2</a></td>
+      <td><a href="/demos/chap5-demo-3.html">demo-5-3</a></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第6章-1">第6章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/demos/chap6-demo-1.html">demo-6-1</a></td>
+      <td><a href="/demos/chap6-demo-2.html">demo-6-2</a></td>
+      <td><a href="/demos/chap6-demo-3.html">demo-6-3</a></td>
+      <td><a href="/demos/chap6-demo-4.html">demo-6-4</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="第7章-1">第7章</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/demos/chap7-demo-1.html">demo-7-1</a></td>
+      <td><a href="/demos/chap7-demo-2.html">demo-7-2</a></td>
+      <td><a href="/demos/chap6-demo-3.html">demo-7-3</a></td>
+      <td><a href="/demos/chap6-demo-4.html">demo-7-4</a></td>
+    </tr>
+    <tr>
+      <td><a href="/demos/chap7-demo-5.html">demo-7-5</a></td>
+      <td><a href="/demos/chap7-demo-6.html">demo-7-6</a></td>
+      <td><a href="/demos/chap7-demo-9.html">demo-7-9</a></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+      
     </div>
-</body>
-</textarea>
-					<span>实现菜单选择</span>
-					<textarea cols="103px" rows="18px">li{
-		list-style-type: none;
-		float: left;
-	}
-	.neirong{
-		display: block;
-		width: 160px;/*设置块的宽度*/
-		height: 50px;/*设置块的长度*/
-		font-family: Microsoft Yahei;
-		line-height: 50px;/*设置字体在块中的高度*/
-		background-color: #2f4f4f;
-		margin: 0px 0px;/*块里的高宽通过margin设置*/
-		color: #fff;
-		text-align: center;/*字体居中*/
-		text-decoration: none;/*去掉下划线*/
-		font-size: 15px;
-	}
-	.neirong:hover{
-		background-color: #2f6f4f;
-	}</textarea>
-				<span>实现左侧导航栏</span>
-				<textarea cols="103px" rows="18px">
-					#dy ul{
-						padding-left:20px;
-						padding-top:10px;
-						list-style:none;
-						/*去掉点*/
-					}
-					#dy ul li{
-						float:left;
-						width:80px;
-						margin:5px;
-					}
-					#dy ul li a{
-						float:left;
-						font-size:16px;
-						color:#333333;
-						text-decoration:none;
-					}
-					#dy ul li{
-						float:left;
-						margin-right:6px;
-					}
-				</textarea>
-		            </div>         
-		        </div>
-		        <div id="footer">
-		    		<span>联系我们：400-810-0580（免费业务）　400-810-3568（会员业务）</span>
-		    	</div>
-		    </div>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
 </html>
